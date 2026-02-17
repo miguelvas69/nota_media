@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media de aluno - 17/02</title>
+
+    <style>
+        body{
+            background-color: rgb(247, 247, 185);
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+
+        button{
+            font-size: 20px;
+            margin: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>calcule a media do aluno</h1>
+
+    <p>um programa basico de HTML, CSS E JAVASCRIPT para calcular a media de um aluno</p>
+    <p> para medir meu conhecimento de JAVASCRIPT</p>
+
+    <button onclick="adcionar()">confirmar</button><button onclick="total()">ver a media</button>
+
+
+    <script>   
+
+    const maxLen = 4
+    let notas = []
+    let soma = 0
+
+
+    function adcionar(){
+        let nota = Number(prompt("quais são as notas? "))
+
+        notas.push(nota)
+        if (notas.length > maxLen) {
+            alert("numero maximo de notas (4)")
+        }
+    }
+
+    function total(){
+        for (let i = 0; i < notas.length; i++) {
+            soma += notas[i];
+
+        }
+
+        const media = soma / notas.length;
+        console.log(media);
+
+        alert(`o resultado deu ${media}`)
+    }
+
+
+
+    </script>
+</body>
+</html>
